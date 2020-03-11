@@ -1,0 +1,194 @@
+{
+    "card": {
+        "style": "",
+        "script": "",
+        "title": "",
+        "titleStyle": [
+            {
+                "display": "none"
+            }
+        ],
+        "showCarousel": true,
+        "body": [
+            {
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "weight": "default",
+                        "class": "",
+                        "text": "Select Date Range",
+                        "horizontalAlignment": "center"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "type": "Filters",
+                "title": "Trailing 12 Months",
+                "data": {
+                    "filters": [
+                        {
+                            "filterJaql": {
+                                "last": {
+                                    "count": 12,
+                                    "offset": 1
+                                },
+                                "custom": true
+                            },
+                            "dim": {
+                                "title": "CustomerFilter",
+                                "table": "Commerce",
+                                "column": "Sales_Date",
+                                "datatype": "datetime",
+                                "level": "Months"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Filters",
+                "title": "Trailing 24 Months",
+                "wrap": true,
+                "data": {
+                    "filters": [
+                        {
+                            "filterJaql": {
+                                "last": {
+                                    "count": "24",
+                                    "offset": 1
+                                },
+                                "custom": true
+                            },
+                            "dim": {
+                                "title": "CustomerFilter",
+                                "table": "Commerce",
+                                "column": "Sales_Date",
+                                "datatype": "datetime",
+                                "level": "Months"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "config": {
+        "fontFamily": "Open Sans",
+        "fontSizes": {
+            "default": 16,
+            "small": 12,
+            "medium": 22,
+            "large": 32,
+            "extraLarge": 50
+        },
+        "fontWeights": {
+            "default": 500,
+            "light": 100,
+            "bold": 1000
+        },
+        "containerStyles": {
+            "default": {
+                "backgroundColor": "#ffff",
+                "foregroundColors": {
+                    "default": {
+                        "normal": "#3A4356"
+                    },
+                    "white": {
+                        "normal": "#ffff"
+                    },
+                    "grey": {
+                        "normal": "#5C6372"
+                    },
+                    "orange": {
+                        "normal": "#f2B900"
+                    },
+                    "yellow": {
+                        "normal": "#ffcb05"
+                    },
+                    "black": {
+                        "normal": "#000000"
+                    },
+                    "lightGreen": {
+                        "normal": "#3ADCCA"
+                    },
+                    "green": {
+                        "normal": "#54a254"
+                    },
+                    "red": {
+                        "normal": "#dd1111"
+                    },
+                    "accent": {
+                        "normal": "#2E89FC"
+                    },
+                    "good": {
+                        "normal": "#54a254"
+                    },
+                    "warning": {
+                        "normal": "#e69500"
+                    },
+                    "attention": {
+                        "normal": "#cc3300"
+                    }
+                }
+            }
+        },
+        "imageSizes": {
+            "default": 40,
+            "small": 40,
+            "medium": 80,
+            "large": 160
+        },
+        "imageSet": {
+            "imageSize": "medium",
+            "maxImageHeight": 100
+        },
+        "actions": {
+            "color": "white",
+            "backgroundColor": "#2f7778",
+            "maxActions": 5,
+            "spacing": "small",
+            "buttonSpacing": 10,
+            "actionsOrientation": "horizontal",
+            "actionAlignment": "center",
+            "showCard": {
+                "actionMode": "inline",
+                "inlineTopMargin": -1,
+                "style": "default"
+            }
+        },
+        "spacing": {
+            "default": 5,
+            "small": 20,
+            "medium": 40,
+            "large": 60,
+            "extraLarge": 40,
+            "padding": 0
+        },
+        "separator": {
+            "lineThickness": 1,
+            "lineColor": "white"
+        },
+        "factSet": {
+            "title": {
+                "size": "default",
+                "color": "default",
+                "weight": "bold",
+                "warp": true
+            },
+            "value": {
+                "size": "default",
+                "color": "default",
+                "weight": "default",
+                "warp": true
+            },
+            "spacing": 20
+        },
+        "supportsInteractivity": true,
+        "height": 85,
+        "imageBaseUrl": ""
+    }
+}
